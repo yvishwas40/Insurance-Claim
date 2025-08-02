@@ -1,21 +1,26 @@
+# Core Web App
 streamlit
-PyMuPDF
-faiss-cpu
-spacy
-google-generativeai
+fastapi
+uvicorn
+
+# Embedding and NLP
 sentence-transformers
-protobuf  # required by google-generativeai
 spacy==3.8.7
 spacy-legacy==3.0.12
 spacy-loggers==1.0.5
-fastapi
-uvicorn
-requests
-PyMuPDF
+
+# Text Search & Vector Databases
 faiss-cpu
-sentence-transformers
+pinecone  # ✅ Correct package name (not pinecone-client)
+pinecone-client>=3.0.0,<4.0.0
+# PDF & Parsing
+PyMuPDF
+
+# Google Generative AI
 google-generativeai
+protobuf  # Needed for Google GenAI
+
+# Utilities
+requests
 pydantic
-pinecone
-pinecone-client-6.0.0 
-python-dotenv-1.1.1
+python-dotenv 
