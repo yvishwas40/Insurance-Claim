@@ -1,6 +1,14 @@
 # Core Web App
 fastapi
 uvicorn
+
+# Embedding and NLP
+sentence-transformers
+spacy==3.8.7
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+
+✅ Correct package name (not pinecone-client)
 pinecone-client>=3.0.0,<4.0.0
 # PDF & Parsing
 PyMuPDF
@@ -11,4 +19,5 @@ protobuf  # Needed for Google GenAI
 
 # Utilities
 requests
+pydantic
 python-dotenv 
