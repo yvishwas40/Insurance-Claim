@@ -1,8 +1,6 @@
 # Core Web App
 fastapi
 uvicorn
-
-✅ Correct package name (not pinecone-client)
 pinecone-client>=3.0.0,<4.0.0
 # PDF & Parsing
 PyMuPDF
