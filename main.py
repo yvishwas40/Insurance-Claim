@@ -50,14 +50,12 @@ async def run_query(payload: QueryRequest):
             structured = get_structured_answer(top_chunks, question)
 
             results.append({
-                "question": question,
                 "answer": structured.get("answer"),
                 # 
                 # "confidence": structured.get("confidence", 0.0)
             })
 
         return {
-            "status": "success",
             "results": results
         }
 
