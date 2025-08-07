@@ -6,13 +6,15 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 def get_structured_answer(chunks, question):
     import re
+    # Extract text from each chunk
+    context_text = '\n'.join(chunk["text"] for chunk in chunks)
     prompt = f"""
 You are an expert in insurance policy documents.
 
 Based only on the provided policy document context, answer the user's question as structured JSON. If the answer is not found in the context, say "Sorry, no relevant information found in the policy to answer your question." and leave the clause_reference blank.
 
 Context:
-{'\n'.join(chunks)}
+{context_text}
 
 Question:
 {question}
